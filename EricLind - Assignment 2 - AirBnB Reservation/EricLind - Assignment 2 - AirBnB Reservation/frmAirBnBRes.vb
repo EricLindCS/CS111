@@ -3,7 +3,7 @@
 Option Strict On
 Public Class frmAirBnbRes
 
-    Const _airBnbPricePerDay As Double = 79.99
+    Const _airBnbPricePerDay As Double = 79.00
 
     Private Sub btnDisp_Click(sender As Object, e As EventArgs) Handles btnDisp.Click
         Dim strNumNights As String
