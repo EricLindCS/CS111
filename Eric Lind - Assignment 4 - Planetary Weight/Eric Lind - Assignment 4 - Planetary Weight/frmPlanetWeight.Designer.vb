@@ -50,10 +50,11 @@ Partial Class frmPlanetWeight
         ' 
         ' boxSelectPlanet
         ' 
+        boxSelectPlanet.BackColor = Color.FloralWhite
         boxSelectPlanet.Controls.Add(radioMars)
         boxSelectPlanet.Controls.Add(radioVenus)
         boxSelectPlanet.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        boxSelectPlanet.Location = New Point(419, 141)
+        boxSelectPlanet.Location = New Point(435, 147)
         boxSelectPlanet.Name = "boxSelectPlanet"
         boxSelectPlanet.Size = New Size(200, 100)
         boxSelectPlanet.TabIndex = 1
@@ -64,7 +65,7 @@ Partial Class frmPlanetWeight
         ' 
         radioMars.AutoSize = True
         radioMars.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
-        radioMars.Location = New Point(28, 68)
+        radioMars.Location = New Point(28, 64)
         radioMars.Name = "radioMars"
         radioMars.Size = New Size(131, 24)
         radioMars.TabIndex = 1
@@ -88,7 +89,7 @@ Partial Class frmPlanetWeight
         ' 
         lblTitle.AutoSize = True
         lblTitle.Font = New Font("SWRomnt", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
-        lblTitle.Location = New Point(372, 28)
+        lblTitle.Location = New Point(388, 28)
         lblTitle.Name = "lblTitle"
         lblTitle.Size = New Size(294, 35)
         lblTitle.TabIndex = 2
@@ -98,7 +99,7 @@ Partial Class frmPlanetWeight
         ' 
         lblEnter.AutoSize = True
         lblEnter.Font = New Font("SWComp", 14.25F, FontStyle.Regular, GraphicsUnit.Point)
-        lblEnter.Location = New Point(341, 91)
+        lblEnter.Location = New Point(357, 92)
         lblEnter.Name = "lblEnter"
         lblEnter.Size = New Size(237, 25)
         lblEnter.TabIndex = 3
@@ -106,23 +107,24 @@ Partial Class frmPlanetWeight
         ' 
         ' txtWeightBox
         ' 
-        txtWeightBox.Location = New Point(584, 91)
+        txtWeightBox.Font = New Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        txtWeightBox.Location = New Point(609, 92)
         txtWeightBox.Name = "txtWeightBox"
-        txtWeightBox.Size = New Size(56, 23)
+        txtWeightBox.Size = New Size(63, 26)
         txtWeightBox.TabIndex = 4
         ' 
         ' btnCalculate
         ' 
-        btnCalculate.Location = New Point(368, 310)
+        btnCalculate.Location = New Point(388, 310)
         btnCalculate.Name = "btnCalculate"
         btnCalculate.Size = New Size(85, 30)
         btnCalculate.TabIndex = 5
-        btnCalculate.Text = "Calculate"
+        btnCalculate.Text = "Display"
         btnCalculate.UseVisualStyleBackColor = True
         ' 
         ' btnClear
         ' 
-        btnClear.Location = New Point(477, 310)
+        btnClear.Location = New Point(492, 310)
         btnClear.Name = "btnClear"
         btnClear.Size = New Size(85, 30)
         btnClear.TabIndex = 6
@@ -133,7 +135,7 @@ Partial Class frmPlanetWeight
         ' 
         lblDisplayWeight.AutoSize = True
         lblDisplayWeight.Font = New Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
-        lblDisplayWeight.Location = New Point(316, 264)
+        lblDisplayWeight.Location = New Point(329, 268)
         lblDisplayWeight.Name = "lblDisplayWeight"
         lblDisplayWeight.Size = New Size(407, 25)
         lblDisplayWeight.TabIndex = 7
@@ -141,7 +143,7 @@ Partial Class frmPlanetWeight
         ' 
         ' btnExit
         ' 
-        btnExit.Location = New Point(586, 310)
+        btnExit.Location = New Point(596, 310)
         btnExit.Name = "btnExit"
         btnExit.Size = New Size(85, 30)
         btnExit.TabIndex = 9
@@ -181,7 +183,7 @@ Partial Class frmPlanetWeight
     Friend WithEvents txtWeightBox As TextBox
     Friend WithEvents btnCalculate As Button
     Friend WithEvents btnClear As Button
-    Friend WithEvents lblDisplayWeight As Label
     Friend WithEvents btnExit As Button
     Public WithEvents picGalaxy As PictureBox
+    Public WithEvents lblDisplayWeight As Label
 End Class

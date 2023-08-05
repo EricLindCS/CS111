@@ -1,6 +1,6 @@
 ﻿Public Class frmPlanetWeight
     Private Sub frmPlanetWeight_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        lblDisplayWeight.Text = ""
     End Sub
 
     Private Sub btnCalculate_Click(sender As Object, e As EventArgs) Handles btnCalculate.Click
@@ -25,10 +25,15 @@
                     planetUsed = "Venus"
                 End If
 
-                finalKg = convFactorUsed * enteredWeight
-                finalLbs = convFactorUsed * finalKg * 0.454
+
+                finalLbs = Math.Round(convFactorUsed * enteredWeight, 1)
+                finalKg = Math.Round(finalLbs * 0.454, 1)
+
 
                 lblDisplayWeight.Text = "Your weight on " & planetUsed & " is " & finalLbs.ToString() & " lbs or " & finalKg.ToString() & " kg."
+
+
+
             Else
                 MsgBox("Your entered " & enteredWeight.ToString() & ". Please enter a positive value.")
                 txtWeightBox.Text = ""
@@ -56,4 +61,5 @@
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Close()
     End Sub
+
 End Class
