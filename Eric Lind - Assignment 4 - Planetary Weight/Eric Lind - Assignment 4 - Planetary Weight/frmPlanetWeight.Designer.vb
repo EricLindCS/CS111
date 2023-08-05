@@ -108,7 +108,7 @@ Partial Class frmPlanetWeight
         ' txtWeightBox
         ' 
         txtWeightBox.Font = New Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        txtWeightBox.Location = New Point(609, 92)
+        txtWeightBox.Location = New Point(609, 91)
         txtWeightBox.Name = "txtWeightBox"
         txtWeightBox.Size = New Size(63, 26)
         txtWeightBox.TabIndex = 4
@@ -134,10 +134,10 @@ Partial Class frmPlanetWeight
         ' lblDisplayWeight
         ' 
         lblDisplayWeight.AutoSize = True
-        lblDisplayWeight.Font = New Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
-        lblDisplayWeight.Location = New Point(329, 268)
+        lblDisplayWeight.Font = New Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        lblDisplayWeight.Location = New Point(367, 269)
         lblDisplayWeight.Name = "lblDisplayWeight"
-        lblDisplayWeight.Size = New Size(407, 25)
+        lblDisplayWeight.Size = New Size(356, 18)
         lblDisplayWeight.TabIndex = 7
         lblDisplayWeight.Text = "Your weight on XXXXX is XXXX lbs or XXXX kg"
         ' 
