@@ -13,4 +13,7 @@ Public Class SplashScreen1
         Me.Hide()
     End Sub
 
+    Private Sub Version_Click(sender As Object, e As EventArgs) Handles Version.Click
+
+    End Sub
 End Class

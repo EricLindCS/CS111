@@ -14,10 +14,7 @@ Partial Class SplashScreen1
         End Try
     End Sub
     Friend WithEvents ApplicationTitle As Label
-    Friend WithEvents Version As Label
-    Friend WithEvents Copyright As Label
     Friend WithEvents MainLayoutPanel As TableLayoutPanel
-    Friend WithEvents DetailsLayoutPanel As TableLayoutPanel
 
     'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
@@ -30,6 +27,7 @@ Partial Class SplashScreen1
         components = New ComponentModel.Container()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(SplashScreen1))
         MainLayoutPanel = New TableLayoutPanel()
+        Label1 = New Label()
         DetailsLayoutPanel = New TableLayoutPanel()
         Version = New Label()
         Copyright = New Label()
@@ -46,15 +44,28 @@ Partial Class SplashScreen1
         MainLayoutPanel.ColumnCount = 2
         MainLayoutPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 243F))
         MainLayoutPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 100F))
+        MainLayoutPanel.Controls.Add(Label1, 0, 1)
         MainLayoutPanel.Controls.Add(DetailsLayoutPanel, 1, 1)
         MainLayoutPanel.Controls.Add(ApplicationTitle, 1, 0)
         MainLayoutPanel.Dock = DockStyle.Fill
         MainLayoutPanel.Location = New Point(0, 0)
         MainLayoutPanel.Name = "MainLayoutPanel"
+        MainLayoutPanel.RowCount = 2
         MainLayoutPanel.RowStyles.Add(New RowStyle(SizeType.Absolute, 218F))
         MainLayoutPanel.RowStyles.Add(New RowStyle(SizeType.Absolute, 38F))
         MainLayoutPanel.Size = New Size(496, 303)
         MainLayoutPanel.TabIndex = 0
+        ' 
+        ' Label1
+        ' 
+        Label1.Anchor = AnchorStyles.None
+        Label1.BackColor = Color.Transparent
+        Label1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        Label1.Location = New Point(17, 250)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(208, 20)
+        Label1.TabIndex = 2
+        Label1.Text = "Version 1.00"
         ' 
         ' DetailsLayoutPanel
         ' 
@@ -67,6 +78,7 @@ Partial Class SplashScreen1
         DetailsLayoutPanel.Controls.Add(Copyright, 0, 1)
         DetailsLayoutPanel.Location = New Point(246, 221)
         DetailsLayoutPanel.Name = "DetailsLayoutPanel"
+        DetailsLayoutPanel.RowCount = 2
         DetailsLayoutPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 33F))
         DetailsLayoutPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 33F))
         DetailsLayoutPanel.Size = New Size(247, 79)
@@ -77,9 +89,9 @@ Partial Class SplashScreen1
         Version.Anchor = AnchorStyles.None
         Version.BackColor = Color.Transparent
         Version.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Version.Location = New Point(19, 9)
+        Version.Location = New Point(15, 9)
         Version.Name = "Version"
-        Version.Size = New Size(208, 20)
+        Version.Size = New Size(216, 20)
         Version.TabIndex = 1
         Version.Text = "Version 1.00"
         ' 
@@ -108,7 +120,7 @@ Partial Class SplashScreen1
         ' 
         ' Timer1
         ' 
-        Timer1.Interval = 5000
+        Timer1.Interval = 3500
         ' 
         ' SplashScreen1
         ' 
@@ -129,4 +141,8 @@ Partial Class SplashScreen1
     End Sub
 
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Label1 As Label
+    Friend WithEvents DetailsLayoutPanel As TableLayoutPanel
+    Friend WithEvents Version As Label
+    Friend WithEvents Copyright As Label
 End Class

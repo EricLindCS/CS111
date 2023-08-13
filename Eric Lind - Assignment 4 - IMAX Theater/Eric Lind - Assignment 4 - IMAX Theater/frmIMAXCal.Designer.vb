@@ -47,68 +47,92 @@ Partial Class frmIMAXCal
         ' lblTitle
         ' 
         lblTitle.AutoSize = True
-        lblTitle.Location = New Point(541, 60)
+        lblTitle.BackColor = Color.DodgerBlue
+        lblTitle.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point)
+        lblTitle.ForeColor = SystemColors.Control
+        lblTitle.Location = New Point(472, 39)
         lblTitle.Name = "lblTitle"
-        lblTitle.Size = New Size(41, 15)
+        lblTitle.Size = New Size(257, 32)
         lblTitle.TabIndex = 1
-        lblTitle.Text = "Label1"
+        lblTitle.Text = "IMAX Theatre Tickets"
         ' 
         ' lblNumTicket
         ' 
         lblNumTicket.AutoSize = True
-        lblNumTicket.Location = New Point(529, 132)
+        lblNumTicket.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        lblNumTicket.Location = New Point(525, 163)
         lblNumTicket.Name = "lblNumTicket"
-        lblNumTicket.Size = New Size(41, 15)
+        lblNumTicket.Size = New Size(154, 21)
         lblNumTicket.TabIndex = 2
-        lblNumTicket.Text = "Label2"
+        lblNumTicket.Text = "Number of Tickets:"
+        lblNumTicket.Visible = False
         ' 
         ' cmbSeatSelect
         ' 
+        cmbSeatSelect.DropDownStyle = ComboBoxStyle.DropDownList
         cmbSeatSelect.FormattingEnabled = True
-        cmbSeatSelect.Location = New Point(522, 100)
+        cmbSeatSelect.Items.AddRange(New Object() {"Matinee $16", "Evening $27"})
+        cmbSeatSelect.Location = New Point(540, 104)
         cmbSeatSelect.Name = "cmbSeatSelect"
         cmbSeatSelect.Size = New Size(121, 23)
         cmbSeatSelect.TabIndex = 3
         ' 
         ' txtNumTicket
         ' 
-        txtNumTicket.Location = New Point(543, 202)
+        txtNumTicket.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
+        txtNumTicket.Location = New Point(579, 208)
         txtNumTicket.Name = "txtNumTicket"
-        txtNumTicket.Size = New Size(100, 23)
+        txtNumTicket.Size = New Size(43, 33)
         txtNumTicket.TabIndex = 4
+        txtNumTicket.Visible = False
         ' 
         ' btnSubmit
         ' 
-        btnSubmit.Location = New Point(541, 267)
+        btnSubmit.BackColor = Color.DodgerBlue
+        btnSubmit.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
+        btnSubmit.ForeColor = Color.White
+        btnSubmit.Location = New Point(517, 260)
         btnSubmit.Name = "btnSubmit"
-        btnSubmit.Size = New Size(75, 23)
+        btnSubmit.Size = New Size(166, 48)
         btnSubmit.TabIndex = 5
-        btnSubmit.Text = "Button1"
-        btnSubmit.UseVisualStyleBackColor = True
+        btnSubmit.Text = "Cost"
+        btnSubmit.UseVisualStyleBackColor = False
+        btnSubmit.Visible = False
         ' 
         ' btnClear
         ' 
-        btnClear.Location = New Point(544, 316)
+        btnClear.BackColor = Color.DodgerBlue
+        btnClear.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
+        btnClear.ForeColor = Color.White
+        btnClear.Location = New Point(517, 315)
         btnClear.Name = "btnClear"
-        btnClear.Size = New Size(75, 23)
+        btnClear.Size = New Size(166, 48)
         btnClear.TabIndex = 6
-        btnClear.Text = "Button2"
-        btnClear.UseVisualStyleBackColor = True
+        btnClear.Text = "Clear"
+        btnClear.UseVisualStyleBackColor = False
+        btnClear.Visible = False
         ' 
         ' lblPriceDisplay
         ' 
         lblPriceDisplay.AutoSize = True
-        lblPriceDisplay.Location = New Point(530, 375)
+        lblPriceDisplay.BackColor = Color.DodgerBlue
+        lblPriceDisplay.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        lblPriceDisplay.ForeColor = SystemColors.Control
+        lblPriceDisplay.Location = New Point(508, 383)
         lblPriceDisplay.Name = "lblPriceDisplay"
-        lblPriceDisplay.Size = New Size(41, 15)
+        lblPriceDisplay.Size = New Size(182, 21)
         lblPriceDisplay.TabIndex = 7
-        lblPriceDisplay.Text = "Label3"
+        lblPriceDisplay.Text = "$XXX.XX for the tickets"
+        lblPriceDisplay.TextAlign = ContentAlignment.MiddleCenter
+        lblPriceDisplay.Visible = False
         ' 
         ' frmIMAXCal
         ' 
+        AcceptButton = btnSubmit
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImageLayout = ImageLayout.None
+        CancelButton = btnClear
         ClientSize = New Size(800, 450)
         Controls.Add(lblPriceDisplay)
         Controls.Add(btnClear)
@@ -120,7 +144,7 @@ Partial Class frmIMAXCal
         Controls.Add(picIMAX)
         DoubleBuffered = True
         Name = "frmIMAXCal"
-        Text = "Purchase IMAX Theater Tickets"
+        Text = "Purchase IMAX Theatre Tickets"
         CType(picIMAX, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
